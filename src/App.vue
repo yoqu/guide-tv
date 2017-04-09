@@ -1,18 +1,18 @@
 <template>
     <div id="app">
         <!--<firstcomponent></firstcomponent>-->
-        <Header></Header>
+        <YoHeader></YoHeader>
         <div class="layout-content">
             <router-view></router-view>
         </div>
-        <Footer></Footer>
+        <YoFooter></YoFooter>
     </div>
 </template>
 
 <script>
     //导入组件
-    import Header from './layout/Header.vue'
-    import Footer from './layout/Footer.vue'
+    import YoHeader from './layout/Header.vue'
+    import YoFooter from './layout/Footer.vue'
     export default {
         name: 'app',
 //        components:{Header,Footer},
@@ -21,7 +21,7 @@
                 msg: 'Welcome to Your Vue.js App'
             }
         },
-        components: { Header,Footer}
+        components: { YoHeader,YoFooter}
     }
 </script>
 

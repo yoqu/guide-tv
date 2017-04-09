@@ -1,7 +1,7 @@
 <template>
     <footer>
         <div class="layout-copy">
-            2011-2016 &copy; TalkingData
+            2011-2016 &copy; 有趣
         </div>
     </footer>
 </template>

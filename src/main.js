@@ -3,6 +3,7 @@ import App from './App.vue'
 import VueRouter from "vue-router";
 import VueResource from "vue-resource";
 import Iview from "iview";
+import VueLazyLoad from 'vue-lazyload';//图片懒加载插件
 import "iview/dist/styles/iview.css"
 //开启debug模式
 Vue.config.debug = true;
@@ -10,7 +11,12 @@ Vue.config.debug = true;
 Vue.use(VueRouter);
 Vue.use(VueResource);
 Vue.use(Iview);
-
+Vue.use(VueLazyLoad,{
+    preLoad: 1.3,
+    error: 'dist/error.png',
+    loading: 'dist/loading.gif',
+    attempt: 1
+});
 import Index from './page/index.vue'
 import Detail from './page/detail.vue'
 // 创建一个路由器实例

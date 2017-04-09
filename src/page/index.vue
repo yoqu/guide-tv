@@ -1,7 +1,7 @@
 <template>
     <div class="zb-list wrapper-container" >
         <Row type="flex" justify="start" class="code-row-bg">
-            <Col span="5" v-for="zb in zbs">
+            <Col span="6" v-for="zb in zbs">
                 <viewBox :zb-info="zb"></viewBox>
             </Col>
         </Row>
@@ -68,11 +68,13 @@
     }
 </script>
 <style>
+    .code-row-bg{
+        padding-left: 10px;
+    }
     .wrapper-container{
         background: #fff;
         width: 90%;
         margin: 30px auto 20px;
         border-radius: 6px;
-        box-shadow: 0 1px 1px 0 rgba(0,0,0,.1);
     }
 </style>
