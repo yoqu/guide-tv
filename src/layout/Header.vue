@@ -1,19 +1,19 @@
 <template>
     <header>
-        <Menu mode="horizontal" theme="light" active-name="1">
+        <Menu mode="horizontal" theme="light" active-name="1" @on-select="menuJump">
             <div class="layout-logo"></div>
             <div class="layout-nav">
-                <Menu-item name="1">
-                    <Icon type="ios-navigate"></Icon>
-                    <router-link to="/">所有直播</router-link>
+                <Menu-item name="/">
+                        <Icon type="ios-navigate"></Icon>
+                        所有直播
                 </Menu-item>
-                <Menu-item name="2">
-                    <Icon type="ios-keypad"></Icon>
-                    <router-link to="/detail">休闲娱乐</router-link>
+                <Menu-item name="/detail">
+                        <Icon type="ios-keypad"></Icon>
+                        休闲娱乐
                 </Menu-item>
-                <Menu-item name="3">
+                <Menu-item name="/detail">
                     <Icon type="ios-keypad"></Icon>
-                    <router-link to="/detail">世界杯</router-link>
+                    世界杯
                 </Menu-item>
             </div>
         </Menu>
@@ -28,20 +28,26 @@
     </header>
 </template>
 <script type="text/javascript">
-export default{
-    data() {
-        return{
-             title:'直播屋'
+    export default{
+        data() {
+            return {
+                title: '直播屋'
+            }
+        },
+        methods: {
+            menuJump (data){
+                this.$router.push(data);
+            }
         }
     }
-}
 </script>
 <style>
-    .layout{
+    .layout {
         border: 1px solid #d7dde4;
         background: #f5f7f9;
     }
-    .layout-logo{
+
+    .layout-logo {
         width: 100px;
         height: 30px;
         background: #5b6270;
@@ -51,38 +57,42 @@ export default{
         top: 15px;
         left: 20px;
     }
-    .layout-nav{
+
+    .layout-nav {
         width: 420px;
         margin: 0 auto;
     }
 
-   .ivu-menu-light  .layout-nav .ivu-menu-item a{
-        color:#657180;
+    .ivu-menu-light .layout-nav .ivu-menu-item a {
+        color: #657180;
     }
 
-    .ivu-menu-light  .layout-nav .ivu-menu-item-active a{
-        color:#39f;
+    .ivu-menu-light .layout-nav .ivu-menu-item-active a {
+        color: #39f;
 
     }
-    .layout-assistant{
+
+    .layout-assistant {
         width: 300px;
         margin: 0 auto;
         height: inherit;
     }
-    .layout-breadcrumb{
+
+    .layout-breadcrumb {
         padding: 10px 15px 0;
     }
-    .layout-content{
+
+    .layout-content {
         min-height: 200px;
         margin: 15px;
         overflow: hidden;
-        background: #fff;
-        border-radius: 4px;
     }
-    .layout-content-main{
+
+    .layout-content-main {
         padding: 10px;
     }
-    .layout-copy{
+
+    .layout-copy {
         text-align: center;
         padding: 10px 0 20px;
         color: #9ea7b4;

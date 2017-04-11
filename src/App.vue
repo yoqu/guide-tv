@@ -6,7 +6,9 @@
             <router-view></router-view>
         </div>
         <YoFooter></YoFooter>
+        <Back-top></Back-top>
     </div>
+
 </template>
 
 <script>
